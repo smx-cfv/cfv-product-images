@@ -1,0 +1,19 @@
+{
+  "rawDir": "media/raw",
+  "processedDir": "media/processed",
+  "productsDir": "media/processed/products",
+  "manifestJsonPath": "manifest.json",
+  "manifestCsvPath": "manifest.csv",
+  "stateDir": ".media-state",
+  "targetWidths": [480, 768, 1024],
+  "defaultNumericSeparators": ["__"],
+  "preCodes": {
+    "MANN": {
+      "numericSeparators": ["__", "-"],
+      "replacements": [
+        { "from": "_", "to": "" },
+        { "from": ".", "to": "/" }
+      ]
+    }
+  }
+}

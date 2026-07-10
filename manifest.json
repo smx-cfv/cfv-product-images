@@ -1,0 +1,1710 @@
+{
+  "version": 1,
+  "generated_at": "2026-07-10T14:38:25.203Z",
+  "base_url": "https://img.cfvfilter.com/",
+  "widths": [
+    480,
+    768,
+    1024
+  ],
+  "assets": [
+    {
+      "pre_code": "CFV",
+      "raw_code": "50012a",
+      "product_code": "50012a",
+      "source_key": "media/raw/CFV/50012a.jpg",
+      "checksum": "45e0906bf18ecb2dc63889bd1be0a87056a7c92586d0851f5a22c0b7fee21433",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/50012a.jpg",
+        "width": 800,
+        "height": 715,
+        "mime_type": "image/jpeg",
+        "bytes": 222077
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 429,
+          "object_key": "products/CFV__50012a__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50012a__0-480.webp",
+          "checksum": "f212447077a1344e0a7da0d4358dc19970e7d8ee5deb5728c40a5ff4462d080f",
+          "bytes": 33360
+        },
+        {
+          "width": 768,
+          "height": 686,
+          "object_key": "products/CFV__50012a__0-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50012a__0-768.webp",
+          "checksum": "d75b12ad9276eabae60f213bf1a745334fdbefa1ea4906153b32c0903fa76349",
+          "bytes": 72342
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50024a",
+      "product_code": "50024a",
+      "source_key": "media/raw/CFV/50024a.jpg",
+      "checksum": "e9d7fc5a219167817e56ddb15d2f52527eef156ee0b8814aafa69d6aeea83f13",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/50024a.jpg",
+        "width": 757,
+        "height": 800,
+        "mime_type": "image/jpeg",
+        "bytes": 128550
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 507,
+          "object_key": "products/CFV__50024a__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50024a__0-480.webp",
+          "checksum": "2b5022ecee433fd454a61152d5e93552114ecec8e4f7743732d5b9befae428b1",
+          "bytes": 30100
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50035a",
+      "product_code": "50035a",
+      "source_key": "media/raw/CFV/50035a.jpg",
+      "checksum": "3689b7beff51697dc1826527ce67614b0e2baa4e18d682a36a81a0d145dd5aa8",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/50035a.jpg",
+        "width": 800,
+        "height": 629,
+        "mime_type": "image/jpeg",
+        "bytes": 149445
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 377,
+          "object_key": "products/CFV__50035a__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50035a__0-480.webp",
+          "checksum": "3ca4628b3176bea20cf074579d1128615dd7a7e51f8e37d117a59cdd7ab9d4c0",
+          "bytes": 32596
+        },
+        {
+          "width": 768,
+          "height": 604,
+          "object_key": "products/CFV__50035a__0-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50035a__0-768.webp",
+          "checksum": "fa9fe072804363489b0ea614e4279c7ee596d6e32d0a1701269a0b10eb0ba811",
+          "bytes": 78598
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50268A",
+      "product_code": "50268A",
+      "source_key": "media/raw/CFV/50268A__1.jpg",
+      "checksum": "d9621336e4c818012a5d2a67931c4b3538b2c09448bab09b699bda5cab410868",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/50268A__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 588494
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__50268A__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50268A__1-480.webp",
+          "checksum": "3d4a22882e5ed892ec0a0aadd79229d43baf85d5064e784713ec7d272e9058c1",
+          "bytes": 20854
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__50268A__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50268A__1-768.webp",
+          "checksum": "34c6bdb0a62d99ebb70f9ee445b06b0baae49aeb1a1aa339acae6baf33ca3cde",
+          "bytes": 42094
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50268A",
+      "product_code": "50268A",
+      "source_key": "media/raw/CFV/50268A__2.jpg",
+      "checksum": "956c07baace7b8645601dbe461c2a495970bc6cdb3f1bd877c445bf44985b575",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/50268A__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 681390
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__50268A__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50268A__2-480.webp",
+          "checksum": "c7272cc3feb2b598ee0a6961a7c37a0953840f2dbf17940e1f98d718e822ad8d",
+          "bytes": 24092
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__50268A__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50268A__2-768.webp",
+          "checksum": "975066f85784007b774c64e76f0391f4aae5cc6a1ead5ee662d2263dc31a1121",
+          "bytes": 49702
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50268A",
+      "product_code": "50268A",
+      "source_key": "media/raw/CFV/50268A__3.jpg",
+      "checksum": "1be3d6131c7361bc747519272132cfa19e69ddd68e9338b707174273bb2c3ec0",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/50268A__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 654501
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__50268A__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50268A__3-480.webp",
+          "checksum": "d159bfb0acdeef7590c0403ebbf2e31c5b773256942f340f45d86c78d81f8afc",
+          "bytes": 21460
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__50268A__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50268A__3-768.webp",
+          "checksum": "9d4a7878f9c8e9b66a0dc9a5846754c6db348bc208934b55f62129fab1f029c1",
+          "bytes": 43084
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50277A",
+      "product_code": "50277A",
+      "source_key": "media/raw/CFV/50277A__1.jpg",
+      "checksum": "66c01b1fa4b0a3e4779a544b424f17255b48f8ff94309c106c59d04bbc5e18b6",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/50277A__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 658154
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__50277A__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50277A__1-480.webp",
+          "checksum": "8366269bb851254804efd3242317004ff2c9b6300e1938bd61eb12904ac4399c",
+          "bytes": 32914
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__50277A__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50277A__1-768.webp",
+          "checksum": "850eee32a8a29762340c4fabf726ef6dcabb1a6c85c7b3b557acdcbc521e8430",
+          "bytes": 67444
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50277A",
+      "product_code": "50277A",
+      "source_key": "media/raw/CFV/50277A__2.jpg",
+      "checksum": "de5ddf619268bc1321b1089447ffe4a908b3f802bbc1e72bf39d921bdf1c12a0",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/50277A__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 520706
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__50277A__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50277A__2-480.webp",
+          "checksum": "48c6c55792c0df9935e831d4844b1e5d51a0a97bcbbb1eb1189293cb631a16f2",
+          "bytes": 20476
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__50277A__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50277A__2-768.webp",
+          "checksum": "8a255dc4e4883486be2c4171d4d775ba08e4db8777aa1604b956799e7d914a25",
+          "bytes": 36538
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "50277A",
+      "product_code": "50277A",
+      "source_key": "media/raw/CFV/50277A__3.jpg",
+      "checksum": "4529634123d7096fc002d29ed2ca25a1bae0a31a2e429e155da3750b9fbfcd4c",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/50277A__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 564802
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__50277A__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50277A__3-480.webp",
+          "checksum": "605fe59d73906a3b396f22089105b6ba9b9f95ed808b46ce4f47484996844316",
+          "bytes": 22438
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__50277A__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__50277A__3-768.webp",
+          "checksum": "3d307f264185e8b40eebafc67664504003aa1cc1f9e9c13a3c6364278dfa3845",
+          "bytes": 41286
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60001L",
+      "product_code": "60001L",
+      "source_key": "media/raw/CFV/60001L__1.jpg",
+      "checksum": "4efad6fa548ce62b72cf0f09c7e2003d6ae8d4cf04aa2ff77ec44625e3ed5c46",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/60001L__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 499793
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60001L__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60001L__1-480.webp",
+          "checksum": "4387e4874aea194afe806fd2ca6136ab388e19c650d98d301a66e2766ac4ce7c",
+          "bytes": 11342
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60001L__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60001L__1-768.webp",
+          "checksum": "2c9e444c8ce036147451c1e1ce5fb6cdb34788a9ef740bcb0af002f617dbd475",
+          "bytes": 21160
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60001L",
+      "product_code": "60001L",
+      "source_key": "media/raw/CFV/60001L__2.jpg",
+      "checksum": "34a20eb553e825dc660bae1f4bf8b5c8918791c7eb36d2e37a8b45ab48a376a7",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/60001L__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 498867
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60001L__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60001L__2-480.webp",
+          "checksum": "e36fed9520135dd0f5ba98af9c4ab5acaf6d93c572bf078bfdb8f0ece43665b6",
+          "bytes": 15128
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60001L__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60001L__2-768.webp",
+          "checksum": "e10048e1a37d71fdd964845bf4b2dac79fb90045716acbff86c4bfc297b19388",
+          "bytes": 28116
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60001L",
+      "product_code": "60001L",
+      "source_key": "media/raw/CFV/60001L__3.jpg",
+      "checksum": "177770349a8a4234bb67a34dd2c5891e4516265c7e1c520a0dbfa32267d9e7a1",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/60001L__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 580946
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60001L__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60001L__3-480.webp",
+          "checksum": "94702252c52a6b9bcb7511fd399897f7d86a96f596e5cb916694f53518078601",
+          "bytes": 21680
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60001L__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60001L__3-768.webp",
+          "checksum": "a3340689359ee10ee5247321a6c547d35c90b7279e087f56fa3a4481b634bf5a",
+          "bytes": 42464
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60157L",
+      "product_code": "60157L",
+      "source_key": "media/raw/CFV/60157L.png",
+      "checksum": "6a96613e8deb47c31ecf0a628401f90fef6cdec60edd1015a237b647dd5d985e",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/60157L.png",
+        "width": 1345,
+        "height": 1345,
+        "mime_type": "image/png",
+        "bytes": 1005055
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60157L__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60157L__0-480.webp",
+          "checksum": "d8157daa7feb80d46064d5f020b8eed694c3c9d9fc5f289f9f9c044c16f45272",
+          "bytes": 14572
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60157L__0-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60157L__0-768.webp",
+          "checksum": "aca12b7090eee3079b797733985bf015d86527a51c7dc45e743a4f287470a395",
+          "bytes": 26856
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "object_key": "products/CFV__60157L__0-1024.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60157L__0-1024.webp",
+          "checksum": "a153399b77111acb06fc36c8412ce4ec24b4b67a2d60a5d345a9cd9a8ece7fa7",
+          "bytes": 40248
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60168L",
+      "product_code": "60168L",
+      "source_key": "media/raw/CFV/60168L.png",
+      "checksum": "a36cfac680e6c8452f2f39b103bccc87eb924692b7e053246677b77ddc43cdfd",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/60168L.png",
+        "width": 1134,
+        "height": 1135,
+        "mime_type": "image/png",
+        "bytes": 683312
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60168L__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60168L__0-480.webp",
+          "checksum": "f9bb079231ddb7df67db3abd98dcfe61579ee09fdb3892c7ce2a0742834da274",
+          "bytes": 13032
+        },
+        {
+          "width": 768,
+          "height": 769,
+          "object_key": "products/CFV__60168L__0-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60168L__0-768.webp",
+          "checksum": "8cd72eb4f80bdf00b5a789295b7b48219d739d073c56dd0ef5efdbfe8418d196",
+          "bytes": 24664
+        },
+        {
+          "width": 1024,
+          "height": 1025,
+          "object_key": "products/CFV__60168L__0-1024.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60168L__0-1024.webp",
+          "checksum": "a61bfd5fc7bf5c61ad4c2a996bff740f3056e9879cf2b24117b17746f3f663e0",
+          "bytes": 35256
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60180L",
+      "product_code": "60180L",
+      "source_key": "media/raw/CFV/60180L__1.jpg",
+      "checksum": "2650c0e4743f99f72a2ef4b2abe8498ed6f935c7445f661e7c584eab5dd3a1c7",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CFV/60180L__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 449195
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60180L__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__1-480.webp",
+          "checksum": "119527d9018e3419664cf39a545b63134d3d50d0c7c07dda5fac43bc17b8fac5",
+          "bytes": 12152
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60180L__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__1-768.webp",
+          "checksum": "0287a88c6b50514ec9be4b141869b32aa102b54fcdeee5348a9be7d2b1fadd75",
+          "bytes": 22904
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60180L",
+      "product_code": "60180L",
+      "source_key": "media/raw/CFV/60180L__2.jpg",
+      "checksum": "ad18c9935abb020944a4f3a25dcc3212ba83e0d6a4b1b2023298c721007cbcaf",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/60180L__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 578173
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60180L__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__2-480.webp",
+          "checksum": "272c9c5f81ec09041800650a4c3471b7ed519789d898aa2a748540d8a9272dec",
+          "bytes": 20830
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60180L__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__2-768.webp",
+          "checksum": "692693dcd5279a9b0502a1f28aa62fa07a9ce53d5667aa0726df653d75d1fd77",
+          "bytes": 38574
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60180L",
+      "product_code": "60180L",
+      "source_key": "media/raw/CFV/60180L__3.jpg",
+      "checksum": "d49dd5d7bfd666ee3a4f8ed80b31f013edcee1ae6a2b94df9485668b0a2ce3f2",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/60180L__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 621057
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60180L__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__3-480.webp",
+          "checksum": "234437d79872e3e3db6fb6175d993ac49a2773b18ff61bbf92f13c4e272d1de3",
+          "bytes": 23754
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60180L__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__3-768.webp",
+          "checksum": "f17951a83d6a1f9b09f863f2e516de69688494f0566420e68e5dd21505d06a8d",
+          "bytes": 44626
+        }
+      ]
+    },
+    {
+      "pre_code": "CFV",
+      "raw_code": "60180L",
+      "product_code": "60180L",
+      "source_key": "media/raw/CFV/60180L__4.png",
+      "checksum": "fcf88a6d3518d8a5ff6c7a1e112bfc17ca2f4446146c51f3fd32066a78b47ce8",
+      "position": 4,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CFV/60180L__4.png",
+        "width": 1134,
+        "height": 1134,
+        "mime_type": "image/png",
+        "bytes": 1034076
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CFV__60180L__4-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__4-480.webp",
+          "checksum": "5e297fc630dd0d22e8f40374fd9ee70c5eaa487824d3d59f04ddbab03aa4fa12",
+          "bytes": 16792
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CFV__60180L__4-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__4-768.webp",
+          "checksum": "9059ae2e1fff8f01c3091e0ba5cc50cd08aebb59b3d15cf0d0df3c1afa9e1fca",
+          "bytes": 32034
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "object_key": "products/CFV__60180L__4-1024.webp",
+          "slug": "https://img.cfvfilter.com/products/CFV__60180L__4-1024.webp",
+          "checksum": "ed783a6b8adf865feb71c6b7438f38b47200107ab813e185bab0cd83326924f7",
+          "bytes": 48878
+        }
+      ]
+    },
+    {
+      "pre_code": "CNH",
+      "raw_code": "2991585",
+      "product_code": "2991585",
+      "source_key": "media/raw/CNH/2991585__1.jpg",
+      "checksum": "ad3f9af0ec0119cea349cd1e5682732e5a9bc01798e58e5a81b1264b64325214",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/CNH/2991585__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 478086
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CNH__2991585__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__1-480.webp",
+          "checksum": "a7361813b1589cc00be8741e20ae89b479e6dc67889a87e85ea1aed905224950",
+          "bytes": 11060
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CNH__2991585__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__1-768.webp",
+          "checksum": "01237a70536d547b3e0486a12483353c94517890e7b5cc907f4076d7ff4b5a97",
+          "bytes": 22734
+        }
+      ]
+    },
+    {
+      "pre_code": "CNH",
+      "raw_code": "2991585",
+      "product_code": "2991585",
+      "source_key": "media/raw/CNH/2991585__2.jpg",
+      "checksum": "5d13e932e504f9bd5c6b713ce0977027ea54aeaa0a78a4d13a218360a285b709",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CNH/2991585__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 578346
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CNH__2991585__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__2-480.webp",
+          "checksum": "e20f13080089abb0faa992c240ca8ed06368429bf3238181dfd14177291e2860",
+          "bytes": 22842
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CNH__2991585__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__2-768.webp",
+          "checksum": "fc54c2ba6ca5a9134c0ae1e76efc857657a0db45bc0e87008b4cfe8cf8811652",
+          "bytes": 45552
+        }
+      ]
+    },
+    {
+      "pre_code": "CNH",
+      "raw_code": "2991585",
+      "product_code": "2991585",
+      "source_key": "media/raw/CNH/2991585__3.jpg",
+      "checksum": "ad23457b86eed4b6f747da8213b3ab36d26bee6545dbdca6b57621aa35ad8819",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CNH/2991585__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 302341
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CNH__2991585__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__3-480.webp",
+          "checksum": "10646f38e6dabe05cc65ff2155c1b775e1d970b227d38b1641da6a066ace61d0",
+          "bytes": 6740
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CNH__2991585__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__3-768.webp",
+          "checksum": "5dbd1e3502c28b3ebb92563f5c5923dafff17b91c54bffe8202921c28d706b20",
+          "bytes": 12790
+        }
+      ]
+    },
+    {
+      "pre_code": "CNH",
+      "raw_code": "2991585",
+      "product_code": "2991585",
+      "source_key": "media/raw/CNH/2991585__4.jpg",
+      "checksum": "de98ad472a5f7206c1a2b2213c4bfda8843840a641ef8fde57a7aa126023a266",
+      "position": 4,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/CNH/2991585__4.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 536684
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/CNH__2991585__4-480.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__4-480.webp",
+          "checksum": "20b652f1c3478517f133b6916b62d0f7128d43ef1607e145142ca45da3654aa9",
+          "bytes": 14350
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/CNH__2991585__4-768.webp",
+          "slug": "https://img.cfvfilter.com/products/CNH__2991585__4-768.webp",
+          "checksum": "f39c36aad19f63afbffebb3fc58d586ba994fb41e3cf5f2030e4240b8fe54130",
+          "bytes": 29360
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P164375",
+      "product_code": "P164375",
+      "source_key": "media/raw/DON/P164375.jpg",
+      "checksum": "9d205b136240111d73e3ff8b80d95226a511ce912f620694bcebc6f811ebcd20",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P164375.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 42448
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P164375__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P164375__0-480.webp",
+          "checksum": "fb44db73dc67e22e090c290b1717564f73ed96e59e991f32203d1f7b111f6f93",
+          "bytes": 12374
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P164378",
+      "product_code": "P164378",
+      "source_key": "media/raw/DON/P164378.jpg",
+      "checksum": "c3b83aef0af659aefa5b6d6b122b64c72eda7e4193e51ad5af4b390d8dc3e464",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P164378.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 42520
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P164378__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P164378__0-480.webp",
+          "checksum": "5047e08e3ac10eb4b7ca3b297433ff398fe9b50f579dcf10c831f3dcecc52547",
+          "bytes": 12222
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P164381",
+      "product_code": "P164381",
+      "source_key": "media/raw/DON/P164381.jpg",
+      "checksum": "f6b069465344f4148184c9b0bd00e528db690a3d6dc1cff611f9eda82333e562",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P164381.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 39822
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P164381__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P164381__0-480.webp",
+          "checksum": "e09a5aaec6763a6447f70901b839d83ddc0eaaeb6e1a6403072a2158c1d098e1",
+          "bytes": 11898
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P550148",
+      "product_code": "P550148",
+      "source_key": "media/raw/DON/P550148.jpg",
+      "checksum": "48c0ab63e606ba643007903af15fecadd2757934e5be1a6218fe6c4ae5c5a155",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P550148.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 22860
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P550148__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P550148__0-480.webp",
+          "checksum": "645e07b0cbce590eb7f34dcd556e118f98045e98757b3b040be10bd511c58fb6",
+          "bytes": 6784
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P550779",
+      "product_code": "P550779",
+      "source_key": "media/raw/DON/P550779.jpg",
+      "checksum": "a92fa787a20755f83d49b0a75e81e75839441e0f2d4f1d4a472a5a5da9a3a055",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P550779.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 46409
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P550779__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P550779__0-480.webp",
+          "checksum": "170744e523adf01e880fa5eca712a3336948e353a710b158466571d017f8d7bb",
+          "bytes": 12932
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P551421",
+      "product_code": "P551421",
+      "source_key": "media/raw/DON/P551421.jpg",
+      "checksum": "d72bb69236ef9a53f13bf290718007ba380294ce8fc4d4b1ac4dbef858f4499a",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P551421.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 46151
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P551421__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P551421__0-480.webp",
+          "checksum": "038e1ce616258534f16145b000fd50c373bd0ab4ce0347ca4e8ebcd1deb56e5a",
+          "bytes": 13458
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P551422",
+      "product_code": "P551422",
+      "source_key": "media/raw/DON/P551422.jpg",
+      "checksum": "0f882603ec7f6f28d32b4e3fdb870bc03f786ddf3698bd5ff37b71771ee46622",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P551422.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 50102
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P551422__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P551422__0-480.webp",
+          "checksum": "47dd43e95090c7042069e09e7f7b66c9a7743c2502fc39898851633b080cb3b1",
+          "bytes": 15340
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P551423",
+      "product_code": "P551423",
+      "source_key": "media/raw/DON/P551423.jpg",
+      "checksum": "b4d3e6e67d71d9a2e90b3d5a40f740aee3cf9c4d9ef98651e2391a92eecbd3eb",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P551423.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 40570
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P551423__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P551423__0-480.webp",
+          "checksum": "8a3934ff074170944cb3803dc453d3a8ac5ec82c2575f205f03dfc9058ac70e2",
+          "bytes": 11836
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P601560",
+      "product_code": "P601560",
+      "source_key": "media/raw/DON/P601560.jpg",
+      "checksum": "1250a8a3198ab0d8dbc9cc3a0bcf56261afb6144c2938b82abf7c383d85c47f4",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P601560.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 57867
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P601560__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P601560__0-480.webp",
+          "checksum": "214b3d5c1b113a0d13e6c9235c75c6b3d0d2d2982954260ce6d5b80713d3e9c3",
+          "bytes": 18956
+        }
+      ]
+    },
+    {
+      "pre_code": "DON",
+      "raw_code": "P608676",
+      "product_code": "P608676",
+      "source_key": "media/raw/DON/P608676.jpg",
+      "checksum": "42fc6b0be8589fa3033824e1b2160f0309b980f5e8192eb39ec08ae9f0b8c19b",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/DON/P608676.jpg",
+        "width": 720,
+        "height": 720,
+        "mime_type": "image/jpeg",
+        "bytes": 53361
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/DON__P608676__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/DON__P608676__0-480.webp",
+          "checksum": "be4fdabbeb105feecde3be4bee747f8d3fdeda255db78a8d396a02e1d786ce20",
+          "bytes": 17962
+        }
+      ]
+    },
+    {
+      "pre_code": "FLT",
+      "raw_code": "LF3511",
+      "product_code": "LF3511",
+      "source_key": "media/raw/FLT/LF3511.jpg",
+      "checksum": "ea24539edea994f847f2d937c2458b2508723cb2f81082e81792d6f1b3ecfeb9",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/FLT/LF3511.jpg",
+        "width": 2960,
+        "height": 2485,
+        "mime_type": "image/jpeg",
+        "bytes": 1280259
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 403,
+          "object_key": "products/FLT__LF3511__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__LF3511__0-480.webp",
+          "checksum": "4bfe2495225ab5d1ac933c785dc0ab9f463c80e71830d52e3a5ad904c57d257c",
+          "bytes": 23904
+        },
+        {
+          "width": 768,
+          "height": 644,
+          "object_key": "products/FLT__LF3511__0-768.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__LF3511__0-768.webp",
+          "checksum": "9629677ee5e7aa744e0671d5efec3c9923298763ab33ef9329d1d1ffcfea45cb",
+          "bytes": 50058
+        },
+        {
+          "width": 1024,
+          "height": 860,
+          "object_key": "products/FLT__LF3511__0-1024.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__LF3511__0-1024.webp",
+          "checksum": "bf1970bbd2e5108033c8a47b2ca5a135e3d8dd16e594313fd4265655febd99d3",
+          "bytes": 81070
+        }
+      ]
+    },
+    {
+      "pre_code": "FLT",
+      "raw_code": "LF5074",
+      "product_code": "LF5074",
+      "source_key": "media/raw/FLT/LF5074.jpg",
+      "checksum": "aa7b2236b6c34eefad51debe06272bbab099f6dc65c8d658f1b6163591b0a094",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/FLT/LF5074.jpg",
+        "width": 360,
+        "height": 360,
+        "mime_type": "image/jpeg",
+        "bytes": 23359
+      },
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "object_key": "products/FLT__LF5074__0-360.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__LF5074__0-360.webp",
+          "checksum": "afd0e48fb52d6e090fa7b0b9937edba0a7e59bef744e96afff834769b67f6d5f",
+          "bytes": 8854
+        }
+      ]
+    },
+    {
+      "pre_code": "FLT",
+      "raw_code": "UF106",
+      "product_code": "UF106",
+      "source_key": "media/raw/FLT/UF106.jpg",
+      "checksum": "2577fd7a79744623711e2c3d297c02ada205c4d758a1a9fe6e5b7f284f9269d9",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/FLT/UF106.jpg",
+        "width": 1378,
+        "height": 896,
+        "mime_type": "image/jpeg",
+        "bytes": 765224
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 312,
+          "object_key": "products/FLT__UF106__0-480.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__UF106__0-480.webp",
+          "checksum": "aa85896484ed78b0ce70bf4e296d4ef91738ceb8d211f99876aa012fd0d69f7e",
+          "bytes": 12320
+        },
+        {
+          "width": 768,
+          "height": 499,
+          "object_key": "products/FLT__UF106__0-768.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__UF106__0-768.webp",
+          "checksum": "4eaede7245f2df09c88840a56e57ed6f44b3aaf4a990f670493d9449c8127e07",
+          "bytes": 26772
+        },
+        {
+          "width": 1024,
+          "height": 666,
+          "object_key": "products/FLT__UF106__0-1024.webp",
+          "slug": "https://img.cfvfilter.com/products/FLT__UF106__0-1024.webp",
+          "checksum": "2e1ef1e19117b6090381a56883b5ba88c61eb65a51aa33000214ccb7bcca57d3",
+          "bytes": 55292
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "C_20_500",
+      "product_code": "C20500",
+      "source_key": "media/raw/MANN/C_20_500.jpg",
+      "checksum": "56edc79c77efdcf28df888043cf99444b88c5a4f2a608fae18e87601be1df79e",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/MANN/C_20_500.jpg",
+        "width": 200,
+        "height": 400,
+        "mime_type": "image/jpeg",
+        "bytes": 16349
+      },
+      "variants": [
+        {
+          "width": 200,
+          "height": 400,
+          "object_key": "products/MANN__C_20_500__0-200.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__C_20_500__0-200.webp",
+          "checksum": "a9091dbfcd3c1c27fe196955399982e1fd394c2e041471f23b285c0dee8521da",
+          "bytes": 6316
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "CF_500",
+      "product_code": "CF500",
+      "source_key": "media/raw/MANN/CF_500.jpg",
+      "checksum": "1f8782eab96991f1e7188192248a25a4169debf9c44beff5c3e112d1e282dd75",
+      "position": 0,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/MANN/CF_500.jpg",
+        "width": 200,
+        "height": 400,
+        "mime_type": "image/jpeg",
+        "bytes": 15182
+      },
+      "variants": [
+        {
+          "width": 200,
+          "height": 400,
+          "object_key": "products/MANN__CF_500__0-200.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__CF_500__0-200.webp",
+          "checksum": "5450a36e511340c42779d00ecba26f894b4a5368eb9bbe2dd09f42b81f60ac79",
+          "bytes": 6088
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU6026Z",
+      "product_code": "HU6026Z",
+      "source_key": "media/raw/MANN/HU6026Z-1.jpg",
+      "checksum": "d27e605f66fd1034c4e35302ac5c6973f1e8e1aecb9d9bd7dc5cc9769b021d46",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/MANN/HU6026Z-1.jpg",
+        "width": 800,
+        "height": 800,
+        "mime_type": "image/jpeg",
+        "bytes": 368958
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU6026Z__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__1-480.webp",
+          "checksum": "472435a8fdb9ab7683109f5a2d5254b9cd056f49c5a32fe8310eff457633d29d",
+          "bytes": 12072
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/MANN__HU6026Z__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__1-768.webp",
+          "checksum": "fb697006b218050e6159ba138459e2860e600ecf43d2094d577ee89a062d5301",
+          "bytes": 24774
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU6026Z",
+      "product_code": "HU6026Z",
+      "source_key": "media/raw/MANN/HU6026Z-2.jpg",
+      "checksum": "6c9ecc9a4184b78efb052684c85fdac7cda09be2fc49a720a5c43856cc6566a1",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/MANN/HU6026Z-2.jpg",
+        "width": 800,
+        "height": 800,
+        "mime_type": "image/jpeg",
+        "bytes": 364838
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU6026Z__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__2-480.webp",
+          "checksum": "3e747c98b9705bbf3f53a1565d4becbe944a86029c1f7976fe16f8c67eb4742c",
+          "bytes": 13972
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/MANN__HU6026Z__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__2-768.webp",
+          "checksum": "c972917968228d4c0ee4e5b926b6f900411ef75d9cf0db914eaf4d0df2f6b019",
+          "bytes": 26360
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU6026Z",
+      "product_code": "HU6026Z",
+      "source_key": "media/raw/MANN/HU6026Z-3.jpg",
+      "checksum": "f2047442425452b8b3fdd8ce6e2960d4aaf4fbc4caf396987667d6b4395f29cc",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/MANN/HU6026Z-3.jpg",
+        "width": 800,
+        "height": 800,
+        "mime_type": "image/jpeg",
+        "bytes": 315675
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU6026Z__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__3-480.webp",
+          "checksum": "1779a508726c94b85e43760f75e1a5b382106e6c1d93578b37913c8b3a009b7a",
+          "bytes": 13656
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/MANN__HU6026Z__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__3-768.webp",
+          "checksum": "19e43c262420622e2e7e102e294a41b86a11cca2e13005794d6beecaf9db9d9f",
+          "bytes": 24718
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU6026Z",
+      "product_code": "HU6026Z",
+      "source_key": "media/raw/MANN/HU6026Z-4.jpg",
+      "checksum": "ba6942065cd428196f43c87d21feaedbaadd47ae376fabed6768a8a14aa86fa2",
+      "position": 4,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/MANN/HU6026Z-4.jpg",
+        "width": 800,
+        "height": 800,
+        "mime_type": "image/jpeg",
+        "bytes": 426436
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU6026Z__4-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__4-480.webp",
+          "checksum": "3eaee8965877f66f92a2885c282e3daae0c2d01dc63893567dd8149a0c977a9c",
+          "bytes": 17004
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/MANN__HU6026Z__4-768.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU6026Z__4-768.webp",
+          "checksum": "4d9459bc445e0ea18e7bf384b7073bf04b23297a6f304ed9a5d3ddf7d85204b6",
+          "bytes": 33896
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU713_1X",
+      "product_code": "HU7131X",
+      "source_key": "media/raw/MANN/HU713_1X-1.jpg",
+      "checksum": "975d9989f268cae697f42af41b679b05d862cda401fbb24b9bee7c9dd4a74f33",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/MANN/HU713_1X-1.jpg",
+        "width": 500,
+        "height": 500,
+        "mime_type": "image/jpeg",
+        "bytes": 165171
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU713_1X__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU713_1X__1-480.webp",
+          "checksum": "c0239e6501b5f33b7cd57f1cf390e0246ead64fc820a6c48157a9d27e7063785",
+          "bytes": 14840
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU713_1X",
+      "product_code": "HU7131X",
+      "source_key": "media/raw/MANN/HU713_1X-2.jpg",
+      "checksum": "4a260055796e8e37ed70fe51c7149336be69dff04cc44997c8ddd9c9c98ec119",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/MANN/HU713_1X-2.jpg",
+        "width": 500,
+        "height": 500,
+        "mime_type": "image/jpeg",
+        "bytes": 187252
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU713_1X__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU713_1X__2-480.webp",
+          "checksum": "18cf66b42636d4a28bf51f4cbdae42b68cb449f8f82580065e0ec6c901eb5e98",
+          "bytes": 17312
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU713_1X",
+      "product_code": "HU7131X",
+      "source_key": "media/raw/MANN/HU713_1X-3.jpg",
+      "checksum": "e7e888f066ad0329494fe7bc0d46074c9ad76688f9b8fa2cf9572a5fad920bb6",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/MANN/HU713_1X-3.jpg",
+        "width": 500,
+        "height": 500,
+        "mime_type": "image/jpeg",
+        "bytes": 201764
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU713_1X__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU713_1X__3-480.webp",
+          "checksum": "dcc79af8c50b33b23741e8d5577b87398be493ae23276c14c4607e245cdf8cfa",
+          "bytes": 19968
+        }
+      ]
+    },
+    {
+      "pre_code": "MANN",
+      "raw_code": "HU713_1X",
+      "product_code": "HU7131X",
+      "source_key": "media/raw/MANN/HU713_1X-4.jpg",
+      "checksum": "d1dac8425b5c664b0a438fa28a045bb4ce3934e759bde6f6a8e6d3b4f5071b69",
+      "position": 4,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/MANN/HU713_1X-4.jpg",
+        "width": 500,
+        "height": 500,
+        "mime_type": "image/jpeg",
+        "bytes": 220421
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/MANN__HU713_1X__4-480.webp",
+          "slug": "https://img.cfvfilter.com/products/MANN__HU713_1X__4-480.webp",
+          "checksum": "97c10eb3de8f2584326f3af891e758052c1c344151b6974affa0aec455a002eb",
+          "bytes": 18538
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.351.00",
+      "product_code": "24.351.00",
+      "source_key": "media/raw/UFI/24.351.00__1.jpg",
+      "checksum": "e3891ef27996217ddb975fee249edfe93123e7a092a3e00742b2dbf1a2e3a828",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/UFI/24.351.00__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 541379
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.351.00__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__1-480.webp",
+          "checksum": "ae5e2406a7eaf88199292c3efc7a2516487a0ceaf1d696860030b00734da1dc8",
+          "bytes": 13472
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.351.00__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__1-768.webp",
+          "checksum": "a20972504d8dd6d61d07f4c5ac742541b50e82ba738b0cca8722bbb457f7ca39",
+          "bytes": 29856
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.351.00",
+      "product_code": "24.351.00",
+      "source_key": "media/raw/UFI/24.351.00__2.jpg",
+      "checksum": "84a9c2c487472fcdd515f64fbbe8b637d54393b5a2669c34672830c66303e76e",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/UFI/24.351.00__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 591853
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.351.00__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__2-480.webp",
+          "checksum": "84651e00b7ac1e76910c598c53bbb5cf2ff54409ea3d32a71544f6ad1be50869",
+          "bytes": 20854
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.351.00__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__2-768.webp",
+          "checksum": "897aea1f275a5bb7cd0d2c5d65e04ef1642eb9ca4aba9b83138acd0e5d93950e",
+          "bytes": 40140
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.351.00",
+      "product_code": "24.351.00",
+      "source_key": "media/raw/UFI/24.351.00__3.jpg",
+      "checksum": "8df9a941a14677ec63c0feedbf7bcf8c23d3bef24e45ba6d51e352ae4bb0bb3f",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/UFI/24.351.00__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 482633
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.351.00__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__3-480.webp",
+          "checksum": "fcc8da92ee8abe65db2f45e091175d6fffbbc917d44fd40b94c783de11123fb0",
+          "bytes": 13308
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.351.00__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__3-768.webp",
+          "checksum": "89f301529d061f7a0b3e9c3ef9467d73fd3cedb6f11c83d1f14337f0e215a5a1",
+          "bytes": 26432
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.351.00",
+      "product_code": "24.351.00",
+      "source_key": "media/raw/UFI/24.351.00__4.jpg",
+      "checksum": "2de8fb235ea5211a105ba8df095dd4bdce3e09dfcc33269ee99a80eacef3c167",
+      "position": 4,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/UFI/24.351.00__4.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 570594
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.351.00__4-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__4-480.webp",
+          "checksum": "565641e59e4bd4bc4bbd118ff20b285a9bb20c4cf0635db937b65704e246ff38",
+          "bytes": 12598
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.351.00__4-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.351.00__4-768.webp",
+          "checksum": "63408d71d7328eab0fe94cd135847106c0d838259b7af228ddf5047c34421b67",
+          "bytes": 23432
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.360.00",
+      "product_code": "24.360.00",
+      "source_key": "media/raw/UFI/24.360.00__1.jpg",
+      "checksum": "d07b16a2eb7fd7a54914b6d04f3c1e6124cc7289fbc89b54da541d37359058ff",
+      "position": 1,
+      "is_primary": true,
+      "source": {
+        "path": "media/raw/UFI/24.360.00__1.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 521870
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.360.00__1-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__1-480.webp",
+          "checksum": "b870bcf9c623f3b8346ca652b5d7c947bdf120a11dc01516554370dc1d8b4471",
+          "bytes": 11684
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.360.00__1-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__1-768.webp",
+          "checksum": "ebc1f103ab1deb32a2bc58e24f3c941ec65ec26401bda61c702c996df9ceefa2",
+          "bytes": 27122
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.360.00",
+      "product_code": "24.360.00",
+      "source_key": "media/raw/UFI/24.360.00__2.jpg",
+      "checksum": "d685d0ca296271df35d8ef4dc90602261e0c9e30c1e18dfe32e84109155f1ec5",
+      "position": 2,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/UFI/24.360.00__2.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 492653
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.360.00__2-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__2-480.webp",
+          "checksum": "c51a6c89b8f31c2bbcd7cbfed0856f448521d052352d4fab9f73779963963928",
+          "bytes": 15172
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.360.00__2-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__2-768.webp",
+          "checksum": "9e42221b1a4311fc7c1ed23d87dad5b70eedaba26f5dc884e5acc707f43b62d4",
+          "bytes": 29528
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.360.00",
+      "product_code": "24.360.00",
+      "source_key": "media/raw/UFI/24.360.00__3.jpg",
+      "checksum": "16ccc71e392502dd600432247aac354162e5706c208a4bb02610cb8e382d608b",
+      "position": 3,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/UFI/24.360.00__3.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 475774
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.360.00__3-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__3-480.webp",
+          "checksum": "0ee6e00a80bd9388898e802612b5c069c4be2e10290acf63a329b355ee82beb3",
+          "bytes": 12112
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.360.00__3-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__3-768.webp",
+          "checksum": "fcbaea0359a16df4941480f17bcab97e8833e673a9f6390e551e479c7f8359b9",
+          "bytes": 23608
+        }
+      ]
+    },
+    {
+      "pre_code": "UFI",
+      "raw_code": "24.360.00",
+      "product_code": "24.360.00",
+      "source_key": "media/raw/UFI/24.360.00__4.jpg",
+      "checksum": "ed8659dc375946768fdf2bb5efc82f0cd29c3b88334c243d96f07f9b1a8b6b01",
+      "position": 4,
+      "is_primary": false,
+      "source": {
+        "path": "media/raw/UFI/24.360.00__4.jpg",
+        "width": 1000,
+        "height": 1000,
+        "mime_type": "image/jpeg",
+        "bytes": 546965
+      },
+      "variants": [
+        {
+          "width": 480,
+          "height": 480,
+          "object_key": "products/UFI__24.360.00__4-480.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__4-480.webp",
+          "checksum": "9033ed818d5c18e214fad1e16d2ebf263ba1919770688ddd2d9e49c80dda8b54",
+          "bytes": 16816
+        },
+        {
+          "width": 768,
+          "height": 768,
+          "object_key": "products/UFI__24.360.00__4-768.webp",
+          "slug": "https://img.cfvfilter.com/products/UFI__24.360.00__4-768.webp",
+          "checksum": "7cd4d15988126ed96787e74a95c2943387da1ed3b031d13a0eb70a354a7e4985",
+          "bytes": 30618
+        }
+      ]
+    }
+  ]
+}
