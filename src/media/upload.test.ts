@@ -124,3 +124,116 @@ test("partial upload publishes selected local assets while preserving remote uns
     await fs.rm(root, { recursive: true, force: true });
   }
 });
+
+test("full upload preserves remote-only assets in json and csv manifests", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "cfv-upload-additive-"));
+  try {
+    await fs.mkdir(path.join(root, "media/raw/CFV"), { recursive: true });
+    await fs.writeFile(path.join(root, "media/raw/CFV/A__1.jpg"), await jpeg(800, 800, "#111"));
+    await processMedia({ cwd: root, baseUrl: "https://img.example.test", config: configFor(), dryRun: false });
+    const local = JSON.parse(await fs.readFile(path.join(root, "manifest.json"), "utf8")) as MediaManifest;
+    const localAsset = local.assets[0]!;
+    const remoteOnly = {
+      ...localAsset,
+      pre_code: "UFI",
+      raw_code: "REMOTE",
+      product_code: "REMOTE",
+      source_key: "media/raw/UFI/REMOTE__1.jpg",
+      checksum: "remote-checksum",
+      variants: localAsset.variants.map((variant) => ({
+        ...variant,
+        object_key: variant.object_key.replace("CFV__A", "UFI__REMOTE"),
+        slug: variant.slug.replace("CFV__A", "UFI__REMOTE"),
+      })),
+    };
+    const remoteManifest: MediaManifest = {
+      ...local,
+      assets: [remoteOnly],
+    };
+
+    let publishedJson: MediaManifest | null = null;
+    let publishedCsv = "";
+    const uploader: ObjectUploader = {
+      async putObject(object) {
+        if (object.objectKey === "manifest.json") {
+          publishedJson = JSON.parse(object.body.toString("utf8")) as MediaManifest;
+        }
+        if (object.objectKey === "manifest.csv") {
+          publishedCsv = object.body.toString("utf8");
+        }
+        return {};
+      },
+    };
+
+    const result = await uploadMedia({
+      cwd: root,
+      baseUrl: "https://img.example.test",
+      config: configFor(),
+      confirm: true,
+      uploader,
+      fetchRemoteManifest: async () => remoteManifest,
+    });
+
+    const manifest: MediaManifest = publishedJson ?? assert.fail("manifest.json was not published");
+    assert.equal(result.preservedRemoteAssets, 1);
+    assert.equal(manifest.assets.length, 2);
+    assert.ok(manifest.assets.some((asset) => asset.pre_code === "UFI"));
+    assert.match(publishedCsv, /UFI,REMOTE/);
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});
+
+test("reports upload progress and avoids republishing an unchanged manifest", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "cfv-upload-progress-"));
+  try {
+    await fs.mkdir(path.join(root, "media/raw/CFV"), { recursive: true });
+    await fs.writeFile(path.join(root, "media/raw/CFV/A__1.jpg"), await jpeg(800, 800, "#111"));
+    await processMedia({ cwd: root, baseUrl: "https://img.example.test", config: configFor(), dryRun: false });
+    const local = JSON.parse(await fs.readFile(path.join(root, "manifest.json"), "utf8")) as MediaManifest;
+    const progress: Array<{ completed: number; total: number }> = [];
+    const uploader: ObjectUploader = {
+      async putObject() {
+        return {};
+      },
+    };
+
+    const first = await uploadMedia({
+      cwd: root,
+      baseUrl: "https://img.example.test",
+      config: configFor(),
+      confirm: true,
+      concurrency: 1,
+      uploader,
+      fetchRemoteManifest: async () => null,
+      onProgress: ({ completed, total }) => progress.push({ completed, total }),
+    });
+
+    assert.deepEqual(progress, [
+      { completed: 1, total: 2 },
+      { completed: 2, total: 2 },
+    ]);
+    assert.equal(first.manifestChanged, true);
+
+    let unexpectedUploads = 0;
+    const second = await uploadMedia({
+      cwd: root,
+      baseUrl: "https://img.example.test",
+      config: configFor(),
+      confirm: true,
+      uploader: {
+        async putObject() {
+          unexpectedUploads += 1;
+          return {};
+        },
+      },
+      fetchRemoteManifest: async () => local,
+    });
+
+    assert.equal(second.manifestChanged, false);
+    assert.equal(second.manifestPublished, false);
+    assert.equal(unexpectedUploads, 0);
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});

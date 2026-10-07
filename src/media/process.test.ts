@@ -105,3 +105,30 @@ test("dry-run reads sources without writing processed output", async () => {
     await fs.rm(root, { recursive: true, force: true });
   }
 });
+
+test("reports processing progress for every selected source", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "cfv-process-progress-"));
+  try {
+    await fs.mkdir(path.join(root, "media/raw/CFV"), { recursive: true });
+    await fs.writeFile(path.join(root, "media/raw/CFV/A__1.jpg"), await image(800, 800, "#111"));
+    await fs.writeFile(path.join(root, "media/raw/CFV/B__1.jpg"), await image(800, 800, "#222"));
+    const progress: Array<{ completed: number; total: number; item: string }> = [];
+
+    await processMedia({
+      cwd: root,
+      baseUrl: "https://img.example.test",
+      config: configFor(root),
+      dryRun: false,
+      concurrency: 1,
+      onProgress: ({ completed, total, item }) => progress.push({ completed, total, item }),
+    });
+
+    assert.deepEqual(progress.map(({ completed, total }) => ({ completed, total })), [
+      { completed: 1, total: 2 },
+      { completed: 2, total: 2 },
+    ]);
+    assert.ok(progress.every((item) => item.item.startsWith("media/raw/CFV/")));
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});

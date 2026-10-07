@@ -36,6 +36,15 @@ export interface ProcessMediaOptions {
   dryRun?: boolean;
   resume?: boolean;
   config?: MediaConfig;
+  onProgress?: (progress: ProcessMediaProgress) => void;
+}
+
+export interface ProcessMediaProgress {
+  phase: "processing";
+  completed: number;
+  total: number;
+  item: string;
+  action: "generated" | "reused" | "preserved";
 }
 
 export interface ProcessMediaResult {
@@ -91,14 +100,26 @@ export async function processMedia(options: ProcessMediaOptions): Promise<Proces
   }
 
   let prepared: PreparedAsset[];
+  let completed = 0;
   try {
     prepared = await mapWithConcurrency(finalSources, concurrency, async (source) => {
       const previous = previousBySource.get(source.sourceKey) ?? null;
+      let result: PreparedAsset;
       if (!selectedKeys.has(source.sourceKey)) {
         if (!previous) throw new Error(`Cannot preserve missing previous asset for ${source.sourceKey}`);
-        return preservePreviousAsset(previous, productsDir, stageProductsDir, baseUrl, dryRun);
+        result = await preservePreviousAsset(previous, productsDir, stageProductsDir, baseUrl, dryRun);
+      } else {
+        result = await prepareSourceAsset(source, previous, config, productsDir, stageProductsDir, baseUrl, dryRun);
       }
-      return prepareSourceAsset(source, previous, config, productsDir, stageProductsDir, baseUrl, dryRun);
+      completed += 1;
+      options.onProgress?.({
+        phase: "processing",
+        completed,
+        total: finalSources.length,
+        item: source.sourceKey,
+        action: result.action,
+      });
+      return result;
     });
   } catch (error) {
     if (!dryRun) await fs.rm(stageDir, { recursive: true, force: true });

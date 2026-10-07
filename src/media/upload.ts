@@ -43,6 +43,14 @@ export interface UploadMediaOptions {
   credentials?: R2Credentials;
   uploader?: ObjectUploader;
   fetchRemoteManifest?: (url: string) => Promise<MediaManifest | null>;
+  onProgress?: (progress: UploadMediaProgress) => void;
+}
+
+export interface UploadMediaProgress {
+  phase: "uploading";
+  completed: number;
+  total: number;
+  item: string;
 }
 
 export interface UploadMediaResult {
@@ -57,6 +65,9 @@ export interface UploadMediaResult {
   failed: number;
   manifestPublished: boolean;
   partialPublish: boolean;
+  remoteAssets: number;
+  preservedRemoteAssets: number;
+  manifestChanged: boolean;
 }
 
 interface UploadPlanItem {
@@ -75,7 +86,7 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
   const productsDir = path.resolve(cwd, config.productsDir);
   const queuePath = path.join(cwd, config.stateDir, "r2-upload-queue.json");
   const localManifest = await readManifest(manifestPath);
-  if (!localManifest) throw new Error(`Missing local manifest: ${manifestPath}. Run pnpm media:process first.`);
+  if (!localManifest) throw new Error(`Missing local manifest: ${manifestPath}. Run npm run media:process first.`);
 
   const remoteManifestUrl = new URL("manifest.json", baseUrl).toString();
   const remoteManifest = await (options.fetchRemoteManifest ?? fetchRemoteManifest)(remoteManifestUrl);
@@ -93,7 +104,7 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
       const body = await fs.readFile(filePath);
       const contentChecksum = sha256(body);
       if (variant.checksum && contentChecksum !== variant.checksum) {
-        throw new Error(`Processed file checksum mismatch for ${variant.object_key}. Run pnpm media:process again.`);
+        throw new Error(`Processed file checksum mismatch for ${variant.object_key}. Run npm run media:process again.`);
       }
       const queueItem = queueByKey.get(queueItemIdentity({
         object_key: variant.object_key,
@@ -116,6 +127,9 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
   }
 
   const pending = plan.filter((item) => item.status === "pending");
+  const publishManifest = buildPublishManifest(localManifest, remoteManifest, selectedIds, baseUrl);
+  const preservedRemoteAssets = countPreservedRemoteAssets(remoteManifest, selectedIds);
+  const manifestChanged = !remoteManifest || !manifestsMatchForPublish(publishManifest, remoteManifest);
   const confirm = Boolean(options.confirm);
   if (!confirm) {
     return {
@@ -130,6 +144,28 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
       failed: 0,
       manifestPublished: false,
       partialPublish: isPartialUpload(localManifest.assets, selectedIds),
+      remoteAssets: remoteManifest?.assets.length ?? 0,
+      preservedRemoteAssets,
+      manifestChanged,
+    };
+  }
+
+  if (pending.length === 0 && !manifestChanged) {
+    return {
+      mode: "uploaded",
+      manifestPath,
+      remoteManifestUrl,
+      localAssets: localManifest.assets.length,
+      selectedAssets: selectedAssets.length,
+      queued: 0,
+      uploaded: 0,
+      skipped: plan.length,
+      failed: 0,
+      manifestPublished: false,
+      partialPublish: isPartialUpload(localManifest.assets, selectedIds),
+      remoteAssets: remoteManifest?.assets.length ?? 0,
+      preservedRemoteAssets,
+      manifestChanged: false,
     };
   }
 
@@ -147,6 +183,7 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
       cacheControl: imageCacheControl,
     });
     uploaded += 1;
+    const completed = uploaded;
     const queueItem: UploadQueueItem = {
       object_key: item.variant.object_key,
       source_key: item.asset.source_key,
@@ -159,6 +196,12 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
     };
     uploadedItems.set(queueItemIdentity(queueItem), queueItem);
     await writeUploadQueue(queuePath, mergeQueue(queue, [...uploadedItems.values()]));
+    options.onProgress?.({
+      phase: "uploading",
+      completed,
+      total: pending.length,
+      item: item.variant.object_key,
+    });
   });
 
   const nextQueue = mergeQueue(queue, [
@@ -176,7 +219,6 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
   ]);
   await writeUploadQueue(queuePath, nextQueue);
 
-  const publishManifest = buildPublishManifest(localManifest, remoteManifest, selectedIds, baseUrl);
   await uploader.putObject({
     objectKey: "manifest.csv",
     body: Buffer.from(manifestToCsv(publishManifest), "utf8"),
@@ -202,6 +244,9 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
     failed: 0,
     manifestPublished: true,
     partialPublish: isPartialUpload(localManifest.assets, selectedIds),
+    remoteAssets: remoteManifest?.assets.length ?? 0,
+    preservedRemoteAssets,
+    manifestChanged,
   };
 }
 
@@ -299,10 +344,6 @@ function buildPublishManifest(
   selectedIds: Set<string>,
   baseUrl: string,
 ): MediaManifest {
-  if (!isPartialUpload(localManifest.assets, selectedIds)) {
-    return localManifest;
-  }
-
   const assets = new Map((remoteManifest?.assets ?? []).map((asset) => [assetIdentity(asset), asset]));
   for (const asset of localManifest.assets) {
     if (selectedIds.has(assetIdentity(asset))) assets.set(assetIdentity(asset), asset);
@@ -315,6 +356,29 @@ function buildPublishManifest(
     widths: localManifest.widths,
     assets: sortManifestAssets([...assets.values()]),
   };
+}
+
+function countPreservedRemoteAssets(
+  remoteManifest: MediaManifest | null,
+  selectedIds: Set<string>,
+): number {
+  return (remoteManifest?.assets ?? [])
+    .filter((asset) => !selectedIds.has(assetIdentity(asset)))
+    .length;
+}
+
+function manifestsMatchForPublish(left: MediaManifest, right: MediaManifest): boolean {
+  return JSON.stringify({
+    version: left.version,
+    base_url: left.base_url,
+    widths: left.widths,
+    assets: left.assets,
+  }) === JSON.stringify({
+    version: right.version,
+    base_url: right.base_url,
+    widths: right.widths,
+    assets: right.assets,
+  });
 }
 
 function requiredCredentials(credentials: R2Credentials | undefined): R2Credentials {

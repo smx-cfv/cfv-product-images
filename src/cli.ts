@@ -51,7 +51,7 @@ async function main(): Promise<void> {
 
 function parseCli(args: string[]): CliOptions {
   const command = args[0];
-  if (!command || command === "--help" || command === "-h") {
+  if (!command || args.includes("--help") || args.includes("-h")) {
     printHelp();
     process.exit(command ? 0 : 1);
   }
@@ -102,8 +102,8 @@ function printJson(value: unknown): void {
 
 function printHelp(): void {
   process.stdout.write(`Usage:
-  pnpm media:process -- --pre=MANN --limit=100 --resume --concurrency=4 --dry-run
-  pnpm media:uploads -- --pre=MANN --limit=100 --confirm --concurrency=6
+  npm run media:process -- --pre=MANN --limit=100 --concurrency=4 --dry-run
+  npm run media:uploads -- --pre=MANN --limit=100 --confirm --concurrency=6
 
 Upload is a dry-run unless --confirm is present.
 `);
