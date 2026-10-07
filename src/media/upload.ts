@@ -12,7 +12,7 @@ import {
   sortManifestAssets,
 } from "./manifest";
 import type { ManifestAsset, MediaConfig, MediaManifest, UploadQueue, UploadQueueItem } from "./types";
-import { atomicWriteFile, isMissingPathError, mapWithConcurrency, normalizeBaseUrl, sha256 } from "./utils";
+import { createSerialFileWriter, isMissingPathError, mapWithConcurrency, normalizeBaseUrl, sha256 } from "./utils";
 
 export interface R2Credentials {
   bucketName: string;
@@ -173,6 +173,9 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
   let uploaded = 0;
   const uploadedItems = new Map<string, UploadQueueItem>();
   const concurrency = options.concurrency ?? 6;
+  // Workers finish concurrently: writing the queue from each of them in parallel makes
+  // the renames collide on Windows (EPERM), so every queue write goes through one writer.
+  const writeQueue = createSerialFileWriter(queuePath);
 
   await mapWithConcurrency(pending, concurrency, async (item) => {
     const body = await fs.readFile(item.filePath);
@@ -195,7 +198,7 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
       ...(response.eTag ? { e_tag: response.eTag } : {}),
     };
     uploadedItems.set(queueItemIdentity(queueItem), queueItem);
-    await writeUploadQueue(queuePath, mergeQueue(queue, [...uploadedItems.values()]));
+    await writeQueue(serializeQueue(mergeQueue(queue, [...uploadedItems.values()])));
     options.onProgress?.({
       phase: "uploading",
       completed,
@@ -217,7 +220,7 @@ export async function uploadMedia(options: UploadMediaOptions): Promise<UploadMe
       })),
     ...uploadedItems.values(),
   ]);
-  await writeUploadQueue(queuePath, nextQueue);
+  await writeQueue(serializeQueue(nextQueue));
 
   await uploader.putObject({
     objectKey: "manifest.csv",
@@ -311,8 +314,8 @@ async function readUploadQueue(filePath: string): Promise<UploadQueue | null> {
   }
 }
 
-async function writeUploadQueue(filePath: string, queue: UploadQueue): Promise<void> {
-  await atomicWriteFile(filePath, `${JSON.stringify(queue, null, 2)}\n`);
+function serializeQueue(queue: UploadQueue): string {
+  return `${JSON.stringify(queue, null, 2)}\n`;
 }
 
 function mergeQueue(previous: UploadQueue | null, uploadedItems: UploadQueueItem[]): UploadQueue {

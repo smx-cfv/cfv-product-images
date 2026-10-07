@@ -237,3 +237,59 @@ test("reports upload progress and avoids republishing an unchanged manifest", as
     await fs.rm(root, { recursive: true, force: true });
   }
 });
+
+test("concurrent uploads record every uploaded variant in the queue", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "cfv-upload-concurrent-"));
+  try {
+    await fs.mkdir(path.join(root, "media/raw/CFV"), { recursive: true });
+    for (let index = 0; index < 12; index += 1) {
+      await fs.writeFile(path.join(root, `media/raw/CFV/A${index}__1.jpg`), await jpeg(800, 800, `#${(index + 1).toString(16).repeat(3)}`));
+    }
+    await processMedia({ cwd: root, baseUrl: "https://img.example.test", config: configFor(), dryRun: false });
+
+    const uploader: ObjectUploader = {
+      async putObject() {
+        await new Promise((resolve) => setTimeout(resolve, Math.random() * 10));
+        return {};
+      },
+    };
+    // Windows rejects overlapping renames onto the same file with EPERM: track overlap here.
+    const originalRename = fs.rename;
+    let activeQueueRenames = 0;
+    let maxActiveQueueRenames = 0;
+    fs.rename = async (from, to) => {
+      const isQueue = String(to).endsWith("r2-upload-queue.json");
+      if (isQueue) maxActiveQueueRenames = Math.max(maxActiveQueueRenames, ++activeQueueRenames);
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 2));
+        return await originalRename(from, to);
+      } finally {
+        if (isQueue) activeQueueRenames -= 1;
+      }
+    };
+    let result: Awaited<ReturnType<typeof uploadMedia>>;
+    try {
+      result = await uploadMedia({
+        cwd: root,
+        baseUrl: "https://img.example.test",
+        config: configFor(),
+        confirm: true,
+        concurrency: 6,
+        uploader,
+        fetchRemoteManifest: async () => null,
+      });
+    } finally {
+      fs.rename = originalRename;
+    }
+
+    assert.equal(result.uploaded, 24);
+    assert.equal(maxActiveQueueRenames, 1);
+    const stateFiles = await fs.readdir(path.join(root, ".media-state"));
+    assert.ok(stateFiles.every((name) => !name.includes(".tmp-")), `leftover temp files: ${stateFiles.join(", ")}`);
+    const queue = JSON.parse(await fs.readFile(path.join(root, ".media-state/r2-upload-queue.json"), "utf8")) as { items: Array<{ status: string }> };
+    assert.equal(queue.items.length, 24);
+    assert.ok(queue.items.every((item) => item.status === "uploaded"));
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});

@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { setTimeout as delay } from "node:timers/promises";
 
 export function sha256(value: Buffer | string): string {
   return createHash("sha256").update(value).digest("hex");
@@ -43,9 +44,35 @@ export async function atomicWriteFile(filePath: string, content: string | Buffer
   const temporary = `${target}.tmp-${process.pid}-${Date.now()}-${randomUUID()}`;
   await fs.mkdir(path.dirname(target), { recursive: true });
   await fs.writeFile(temporary, content);
-  await fs.rename(temporary, target);
+  try {
+    await renameWithRetry(temporary, target);
+  } catch (error) {
+    await fs.rm(temporary, { force: true }).catch(() => undefined);
+    throw error;
+  }
 }
 
+const retryableRenameCodes = new Set(["EPERM", "EACCES", "EBUSY"]);
+
+// On Windows, replacing a file fails with EPERM/EACCES/EBUSY while another handle
+// (antivirus, search indexer, backup/sync tools) briefly holds it: retry like graceful-fs does.
+async function renameWithRetry(from: string, to: string, timeoutMs = 10_000): Promise<void> {
+  const deadline = Date.now() + timeoutMs;
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      await fs.rename(from, to);
+      return;
+    } catch (error) {
+      const code = typeof error === "object" && error !== null && "code" in error ? error.code : undefined;
+      const retryable = process.platform === "win32" && typeof code === "string" && retryableRenameCodes.has(code);
+      if (!retryable || Date.now() >= deadline) throw error;
+      await delay(Math.min(20 * attempt, 200));
+    }
+  }
+}
+
+// Stops starting new items after the first failure and waits for in-flight ones,
+// so nothing keeps running (or writing) after the error is reported.
 export async function mapWithConcurrency<T, R>(
   items: T[],
   concurrency: number,
@@ -54,17 +81,47 @@ export async function mapWithConcurrency<T, R>(
   const limit = Math.max(1, Math.floor(concurrency));
   const results = new Array<R>(items.length);
   let nextIndex = 0;
+  let failure: { error: unknown } | undefined;
 
   async function run(): Promise<void> {
-    while (nextIndex < items.length) {
+    while (!failure && nextIndex < items.length) {
       const index = nextIndex;
       nextIndex += 1;
-      results[index] = await worker(items[index]!, index);
+      try {
+        results[index] = await worker(items[index]!, index);
+      } catch (error) {
+        failure ??= { error };
+      }
     }
   }
 
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, run));
+  if (failure) throw failure.error;
   return results;
+}
+
+// Serializes writes of a frequently updated file: at most one write in flight, and
+// updates arriving meanwhile collapse into a single write of the latest content.
+// The returned promise resolves once that content (or a newer one) is on disk.
+export function createSerialFileWriter(filePath: string): (content: string) => Promise<void> {
+  let latest: string | undefined;
+  let writing: Promise<void> | undefined;
+
+  return (content) => {
+    latest = content;
+    writing ??= (async () => {
+      try {
+        while (latest !== undefined) {
+          const next = latest;
+          latest = undefined;
+          await atomicWriteFile(filePath, next);
+        }
+      } finally {
+        writing = undefined;
+      }
+    })();
+    return writing;
+  };
 }
 
 export function parsePositiveInteger(value: string | undefined, label: string): number | undefined {
